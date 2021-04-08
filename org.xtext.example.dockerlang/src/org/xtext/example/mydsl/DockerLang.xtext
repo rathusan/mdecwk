@@ -8,6 +8,3 @@ Model:
 Greeting:
 	'Hello' name=ID '!';
 	
-Test:
-	'Test' name=ID '!';
-
