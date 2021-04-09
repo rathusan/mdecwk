@@ -3,10 +3,26 @@ grammar org.xtext.example.mydsl.DockerLang with org.eclipse.xtext.common.Termina
 generate dockerLang "http://www.xtext.org/example/mydsl/DockerLang"
 
 Model:
-	greetings+=Greeting*;
+	dockerfile=Dockerfile;
 	
-Greeting:
-	'Hello' name=ID '!';
+Dockerfile:
+	FromStatement + CopyStatement + RunStatement + CmdStatement
+;
 
+FromStatement:
+	'FROM'
+;
+
+CopyStatement:
+	'COPY'
+;
+
+RunStatement:
+	'RUN'
+;
+
+CmdStatement:
+	'CMD'
+;
 	
-// Hello jsajdsakfjdlskajfsd
+// Hello
