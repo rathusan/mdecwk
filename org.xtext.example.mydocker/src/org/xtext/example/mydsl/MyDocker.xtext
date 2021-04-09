@@ -1,0 +1,9 @@
+grammar org.xtext.example.mydsl.MyDocker with org.eclipse.xtext.common.Terminals
+
+generate myDocker "http://www.xtext.org/example/mydsl/MyDocker"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';
